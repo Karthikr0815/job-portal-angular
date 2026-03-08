@@ -1,94 +1,270 @@
-# Job Portal Application \uD83D\uDCBC
+# 💼 Job Portal Application
 
-A modern, responsive, and fully functional Job Portal application built using **Angular 21** and **Angular Material**. This project features a mock REST API backend powered by **json-server** to simulate real-world data interactions like job browsing, applying for positions, and a protected company dashboard for posting new jobs.
+A modern, responsive, and fully functional **Job Portal application** built using **Angular 21** and **Angular Material**.
 
----
-
-## \u2728 Features
-
-- **\uD83D\uDD0D Job Browsing:** View a comprehensive list of all available job postings with filtering capabilities.
-- **\uD83D\uDCC4 Job Details:** Click into individual jobs to view in-depth details, descriptions, and requirements. Automatically tracks view counts.
-- **\uD83D\uDCE4 Apply for Jobs:** Candidates can submit applications directly through the platform.
-- **\uD83D\uDD12 Company Dashboard:** A protected route requiring authentication, allowing companies to manage their job listings.
-- **\u2795 Post New Jobs:** Authorized companies can create and publish new job opportunities.
-- **\uD83C\uDFA8 Modern UI/UX:** Styled comprehensively with Angular Material components and custom SCSS for a clean, responsive design.
+This project uses a **mock REST API backend powered by json-server** to simulate real-world data interactions like job browsing, applying for positions, and a protected company dashboard for posting new jobs.
 
 ---
 
-## \uD83D\uDEE0\uFE0F Technology Stack
+# ✨ Features
 
-- **Frontend Framework:** [Angular](https://angular.dev/) (v21.1.0)
-- **UI Component Library:** [Angular Material](https://material.angular.io/)
-- **Mock Backend Server:** [json-server](https://github.com/typicode/json-server)
-- **Styling:** SCSS
-- **Testing:** [Vitest](https://vitest.dev/)
+### 🔍 Job Browsing
+View a comprehensive list of available job postings with filtering capabilities.
 
----
+### 📄 Job Details
+Click into individual jobs to view in-depth details, descriptions, and requirements.  
+Automatically tracks job **view counts**.
 
-## \uD83D\uDE80 Getting Started
+### 📤 Apply for Jobs
+Candidates can submit job applications directly through the platform.
 
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+### 🔐 Company Dashboard
+A protected route requiring authentication, allowing companies to manage their job listings.
 
-### Prerequisites
+### ➕ Post New Jobs
+Authorized companies can create and publish new job opportunities.
 
-Ensure you have the following installed on your system:
-- **Node.js** (v18.x or higher)
-- **npm** (Node Package Manager)
-- **Angular CLI** (`npm install -g @angular/cli`)
-
-### Installation
-
-1. **Clone the repository** (or download the project folder):
-   ```bash
-   git clone <your-repo-url>
-   cd job-portal
-   ```
-
-2. **Install frontend dependencies:**
-   ```bash
-   npm install
-   ```
+### 🎨 Modern UI/UX
+Styled using **Angular Material components** and **custom SCSS** for a clean and responsive design.
 
 ---
 
-## \uD83D\uDCBB How to Run the Project Local\u2B50
+# 🛠 Technology Stack
 
-To run this project fully, you need to start **both** the mock backend server and the Angular frontend development server simultaneously.
+| Technology | Description |
+|------------|-------------|
+| Angular | Frontend framework |
+| Angular Material | UI component library |
+| json-server | Mock backend API |
+| SCSS | Styling |
+| Vitest | Unit testing |
 
-### Step 1: Start the Mock Database Server
-Open a terminal in the project root directory (`job-portal`) and run the following command to start the `json-server`. This will serve the data from `db.json` on `http://localhost:3000`.
+**Versions Used**
+
+- Angular `v21.1.0`
+- Node.js `v18+`
+- npm `v9+`
+
+---
+
+# 🚀 Getting Started
+
+Follow the instructions below to run the project locally.
+
+---
+
+# 📋 Prerequisites
+
+Make sure you have the following installed:
+
+### Install Node.js
+Download from:
+
+```
+
+[https://nodejs.org](https://nodejs.org)
+
+````
+
+Check versions:
+
+```bash
+node -v
+npm -v
+````
+
+### Install Angular CLI
+
+```bash
+npm install -g @angular/cli
+```
+
+Verify installation:
+
+```bash
+ng version
+```
+
+---
+
+# 📥 Installation
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone <your-repository-url>
+```
+
+### 2️⃣ Navigate to the project folder
+
+```bash
+cd job-portal
+```
+
+### 3️⃣ Install project dependencies
+
+```bash
+npm install
+```
+
+---
+
+# 💻 Run the Project Locally
+
+⚠️ The project requires **two servers running simultaneously**:
+
+1. **Mock Backend Server**
+2. **Angular Frontend Server**
+
+---
+
+# ▶️ Step 1: Start the Mock Database Server
+
+Run the following command in the project root directory.
 
 ```bash
 npm run server
 ```
 
-### Step 2: Start the Angular Frontend
-Open a **new, second terminal window** in the same project root directory and run the Angular development server:
+This starts **json-server** and serves data from:
+
+```
+db.json
+```
+
+Server URL:
+
+```
+http://localhost:3000
+```
+
+---
+
+# ▶️ Step 2: Start Angular Development Server
+
+Open a **second terminal window** in the project root folder and run:
 
 ```bash
 npm start
 ```
-*(Alternatively, you can run `ng serve` directly)*
 
-### Step 3: View the Application
-Once both servers are running, open your web browser and navigate to:
+or
+
+```bash
+ng serve
 ```
-http://localhost:4200/
+
+Angular development server will start at:
+
 ```
-The application will automatically reload if you change any of the source files.
+http://localhost:4200
+```
 
 ---
 
-## \uD83D\uDCC2 Project Structure Highlights
+# 🌐 Open the Application
 
-- `src/app/components/`: Contains all the UI views (`job-list`, `job-detail`, `apply-job`, `company-dashboard`, `post-job`, `login`).
-- `src/app/services/`: Contains the services (`job.service`, `applicant.service`, `company.service`) responsible for HTTP calls to the `json-server`.
-- `db.json`: The mock database containing seeded jobs, companies, and applications.
-- `app.routes.ts`: Defines the application's routing map and guards.
+Once both servers are running, open your browser:
+
+```
+http://localhost:4200
+```
+
+The application supports **live reload**, so changes in code will automatically refresh the page.
 
 ---
 
-## \uD83D\uDEE0\uFE0F Additional Commands
+# 📂 Project Structure
 
-- **Build for Production:** `npm run build` (Outputs to the `dist/` directory)
-- **Run Unit Tests:** `npm run test` (Executes tests using Vitest)
+```
+job-portal
+│
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── job-list
+│   │   │   ├── job-detail
+│   │   │   ├── apply-job
+│   │   │   ├── company-dashboard
+│   │   │   ├── post-job
+│   │   │   └── login
+│   │   │
+│   │   ├── services/
+│   │   │   ├── job.service.ts
+│   │   │   ├── applicant.service.ts
+│   │   │   └── company.service.ts
+│   │   │
+│   │   └── app.routes.ts
+│
+├── db.json
+└── package.json
+```
+
+---
+
+# 📦 Important Files
+
+### `db.json`
+
+Mock database containing:
+
+* Jobs
+* Companies
+* Applications
+
+### `app.routes.ts`
+
+Defines the **application routing and route guards**.
+
+### `services/`
+
+Handles **HTTP communication with json-server API**.
+
+---
+
+# 🧪 Testing
+
+Run unit tests using **Vitest**:
+
+```bash
+npm run test
+```
+
+---
+
+# 📦 Build for Production
+
+To generate a production build:
+
+```bash
+npm run build
+```
+
+The compiled files will be generated inside:
+
+```
+dist/
+```
+
+---
+
+# 👨‍💻 Development Notes
+
+* Angular Material is used for UI components.
+* JSON Server simulates REST API endpoints.
+* Authentication logic protects the **Company Dashboard**.
+* SCSS is used for styling and responsive layouts.
+
+---
+
+# ⭐ Future Improvements
+
+* JWT authentication
+* Real backend (Node.js / Spring Boot)
+* Resume upload support
+* Admin panel
+* Job recommendation system
+
+---
+
+
