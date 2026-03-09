@@ -39,6 +39,34 @@ Styled using **Angular Material components** and **custom SCSS** for a clean and
 
 ---
 
+## 🏗️ Architecture Diagram
+
+```mermaid
+graph TD
+    User([👤 User / Browser])
+
+    subgraph "💻 Frontend (Angular 21)"
+        UI[🧩 Components<br/>(Views & UI)]
+        Guards[🛡️ Route Guards<br/>(Authentication)]
+        Services[⚙️ Services<br/>(Business Logic & HTTP)]
+        Interceptors[🔌 Interceptors<br/>(Request/Response Handling)]
+    end
+
+    subgraph "⚙️ Mock Backend"
+        JSONServer[🚀 JSON Server<br/>(REST API)]
+        DB[(📁 db.json<br/>(Mock Database))]
+    end
+
+    User -->|Interacts with| UI
+    UI -->|Navigates through| Guards
+    UI -->|Calls| Services
+    Services -->|HTTP Requests| Interceptors
+    Interceptors -->|API Calls (localhost:3000)| JSONServer
+    JSONServer -->|Reads/Writes| DB
+```
+
+---
+
 ## \uD83D\uDE80 Getting Started
 
 Follow the instructions below to run the project locally.
