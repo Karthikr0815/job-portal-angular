@@ -29,25 +29,17 @@ Styled using **Angular Material components** and **custom SCSS** for a clean and
 
 ---
 
-# 🛠 Technology Stack
+## \uD83D\uDEE0\uFE0F Technology Stack
 
-| Technology | Description |
-|------------|-------------|
-| Angular | Frontend framework |
-| Angular Material | UI component library |
-| json-server | Mock backend API |
-| SCSS | Styling |
-| Vitest | Unit testing |
-
-**Versions Used**
-
-- Angular `v21.1.0`
-- Node.js `v18+`
-- npm `v9+`
+- **Frontend Framework:** [Angular](https://angular.dev/) (v21.1.0)
+- **UI Component Library:** [Angular Material](https://material.angular.io/)
+- **Mock Backend Server:** [json-server](https://github.com/typicode/json-server)
+- **Styling:** SCSS
+- **Testing:** [Vitest](https://vitest.dev/)
 
 ---
 
-# 🚀 Getting Started
+## \uD83D\uDE80 Getting Started
 
 Follow the instructions below to run the project locally.
 
